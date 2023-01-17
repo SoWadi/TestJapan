@@ -1,0 +1,205 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+* {
+    margin: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.bodyContainer {
+    color: bisque;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+/* ----------------------------------------- HEADER ---------------------------------------------- */
+header {
+    background-image: url("/images/header-hero.webp");
+    /* border: 3px solid red; */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:  100%;
+    position: relative;
+
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 20px;
+    padding: 1px;
+    margin-top: -40px;
+    margin-left: 0;
+    display: inline-table;
+}
+
+.logo img {
+    display: block;
+    width: 5rem;
+    margin-top: 3em;
+}
+
+#logoRRSS {
+    width: 20px;
+    padding: 1px;
+    margin-top: -40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+nav ul {
+    margin: -20px;
+    padding: 0px;
+    overflow: hidden;
+    /* border: 2px solid seagreen; */
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    list-style-type: none;
+    float: left;
+    display: inline;
+    height: 180px;
+
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 30px;
+    color: rgb(98, 98, 98);
+
+    align-self: center;
+    justify-content: space-around;
+}
+
+
+.table ul li a {
+    /* border: 2px double fuchsia; */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.rrss i{
+    width: 10%;
+    color: rgb(98, 98, 98);
+}
+
+/* 
+
+ul li a:hover {
+    color: #000100
+} */
+
+.headerDown {
+    height: 100px;
+    margin: 0 30px -10px 30px;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0, 0.15);
+    color: rgb(208, 147, 123);
+}
+
+.headerDown p {
+    padding-top: 0;
+    margin-top: auto;
+}
+
+
+
+/* ----------------------------------------- MAIN ---------------------------------------------- */
+
+main {
+    background-color: rgb(124, 128, 194);
+    border-radius: 12px;
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+    grid-gap: 13px;
+}
+
+.mainLeft {
+    background-image: linear-gradient(to bottom, rgb(34, 2, 2), rgb(65, 65, 63));
+    border-radius: 12px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / repeat(2, 1fr);
+
+}
+
+.mainRight {
+    background-image: linear-gradient(to bottom, rgb(34, 2, 2), rgb(65, 65, 63));
+    border-radius: 12px;
+
+}
+
+/* p {
+    height: 30px;
+    margin: 20px;
+} */
+
+.lastOne {
+    grid-column: 1/ span 2;
+}
+
+/* ----------------------------------------- FOOTER ---------------------------------------------- */
+
+footer {
+    background-color: rgb(124, 128, 194);
+    border-radius: 12px;
+}
+
+/* ----------------------------------------- RESPONSIVE ---------------------------------------------- */
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    main {
+        background-color: rgb(224, 227, 165);
+        display: grid;
+        grid-template: 1fr / 1fr;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    header {
+        grid-template: 1fr / 1fr;
+    }
+
+    .headerUp {
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr;
+    }
+
+    .mainLeft {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lastOne {
+        background-color: rgb(98, 118, 78);
+    }
+}
